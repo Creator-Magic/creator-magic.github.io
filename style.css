@@ -335,3 +335,60 @@ header p {
         transform: scale(0) rotate(720deg);
     }
 }
+
+.vibe-tim-green-9247 {
+    background: radial-gradient(circle at 30% 70%, #8B0000 0%, #8B0000 15%, #2B0000 25%, #000000 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.vibe-tim-green-9247::before {
+    content: '';
+    position: absolute;
+    top: 70%;
+    left: 30%;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, #FF4500 0%, #DC143C 50%, #8B0000 100%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 15px #FF4500, 0 0 30px #DC143C, 0 0 45px #8B0000;
+    animation: red-dwarf-pulse 3s ease-in-out infinite;
+}
+
+.vibe-tim-green-9247::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    height: 4px;
+    background: linear-gradient(90deg, #C0C0C0 0%, #FFFFFF 50%, #C0C0C0 100%);
+    border-radius: 2px;
+    transform-origin: 30% 70%;
+    animation: starship-orbit 6s linear infinite;
+}
+
+@keyframes red-dwarf-pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        box-shadow: 0 0 15px #FF4500, 0 0 30px #DC143C, 0 0 45px #8B0000;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+        box-shadow: 0 0 20px #FF4500, 0 0 40px #DC143C, 0 0 60px #8B0000;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        box-shadow: 0 0 15px #FF4500, 0 0 30px #DC143C, 0 0 45px #8B0000;
+    }
+}
+
+@keyframes starship-orbit {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg) translateX(35px) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg) translateX(35px) rotate(-360deg);
+    }
+}
