@@ -392,3 +392,86 @@ header p {
         transform: translate(-50%, -50%) rotate(360deg) translateX(35px) rotate(-360deg);
     }
 }
+
+.vibe-mike-russell-5927 {
+    background: linear-gradient(135deg, #ff6b35, #f7931e, #ffb02e, #ffd700);
+    position: relative;
+    overflow: hidden;
+    animation: celebration-glow 2.5s ease-in-out infinite alternate;
+}
+
+.vibe-mike-russell-5927::before {
+    content: '🙌';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 3rem;
+    transform: translate(-50%, -50%);
+    animation: level-up-bounce 3s ease-in-out infinite;
+}
+
+.vibe-mike-russell-5927::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, 
+        transparent 0%, 
+        transparent 30%, 
+        rgba(255, 215, 0, 0.3) 40%, 
+        rgba(255, 176, 46, 0.4) 50%, 
+        rgba(247, 147, 30, 0.3) 60%, 
+        transparent 70%);
+    animation: celebration-pulse 2s ease-in-out infinite;
+}
+
+@keyframes celebration-glow {
+    from {
+        box-shadow: 0 0 15px rgba(255, 107, 53, 0.6), 0 0 30px rgba(247, 147, 30, 0.4);
+        background: linear-gradient(135deg, #ff6b35, #f7931e, #ffb02e, #ffd700);
+    }
+    to {
+        box-shadow: 0 0 25px rgba(255, 215, 0, 0.8), 0 0 50px rgba(255, 176, 46, 0.6);
+        background: linear-gradient(135deg, #ffd700, #ffb02e, #f7931e, #ff6b35);
+    }
+}
+
+@keyframes level-up-bounce {
+    0% {
+        transform: translate(-50%, -50%) translateY(0px) scale(1);
+        opacity: 1;
+    }
+    25% {
+        transform: translate(-50%, -50%) translateY(-15px) scale(1.2);
+        opacity: 0.9;
+    }
+    50% {
+        transform: translate(-50%, -50%) translateY(-25px) scale(1.3);
+        opacity: 0.8;
+    }
+    75% {
+        transform: translate(-50%, -50%) translateY(-15px) scale(1.2);
+        opacity: 0.9;
+    }
+    100% {
+        transform: translate(-50%, -50%) translateY(0px) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes celebration-pulse {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.5);
+    }
+}
