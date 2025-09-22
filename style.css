@@ -812,3 +812,131 @@ header p {
         opacity: 0;
     }
 }
+
+.vibe-felipe-cardoso-3291 {
+    background: linear-gradient(45deg, #2c3e50 0%, #3498db 25%, #e74c3c 50%, #f39c12 75%, #27ae60 100%);
+    background-size: 300% 300%;
+    position: relative;
+    overflow: hidden;
+    animation: language-shift 6s ease-in-out infinite;
+}
+
+.vibe-felipe-cardoso-3291::before {
+    content: 'EN';
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    animation: language-cycle 4s infinite;
+}
+
+.vibe-felipe-cardoso-3291::after {
+    content: '?';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 48px;
+    font-weight: bold;
+    color: #ffffff;
+    transform: translate(-50%, -50%);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.4);
+    opacity: 0;
+    animation: confusion-flash 8s infinite;
+}
+
+@keyframes language-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+    25% {
+        background-position: 50% 25%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    75% {
+        background-position: 50% 75%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes language-cycle {
+    0% {
+        content: 'EN';
+        transform: scale(1) rotate(0deg);
+        color: #ffffff;
+    }
+    16.66% {
+        content: 'PT';
+        transform: scale(1.1) rotate(15deg);
+        color: #f39c12;
+    }
+    33.33% {
+        content: 'ES';
+        transform: scale(1) rotate(0deg);
+        color: #e74c3c;
+    }
+    50% {
+        content: 'FR';
+        transform: scale(1.1) rotate(-15deg);
+        color: #3498db;
+    }
+    66.66% {
+        content: 'DE';
+        transform: scale(1) rotate(0deg);
+        color: #27ae60;
+    }
+    83.33% {
+        content: '中文';
+        transform: scale(0.9) rotate(10deg);
+        color: #9b59b6;
+    }
+    100% {
+        content: 'EN';
+        transform: scale(1) rotate(0deg);
+        color: #ffffff;
+    }
+}
+
+@keyframes confusion-flash {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5) rotate(0deg);
+    }
+    10% {
+        opacity: 0;
+    }
+    15% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.2) rotate(10deg);
+        color: #e74c3c;
+        text-shadow: 0 0 15px rgba(231, 76, 60, 0.8);
+    }
+    25% {
+        opacity: 0.7;
+        transform: translate(-50%, -50%) scale(1) rotate(-5deg);
+        color: #f39c12;
+    }
+    35% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8) rotate(0deg);
+    }
+    85% {
+        opacity: 0;
+    }
+    90% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.1) rotate(-10deg);
+        color: #3498db;
+        text-shadow: 0 0 12px rgba(52, 152, 219, 0.8);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5) rotate(0deg);
+    }
+}
