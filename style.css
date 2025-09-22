@@ -77,3 +77,33 @@ header p {
         height: 100px;
     }
 }
+
+.vibe-mike-russell-3847 {
+    background: #4a1a5c;
+    position: relative;
+    overflow: hidden;
+}
+
+.vibe-mike-russell-3847::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    background: #ffffff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulse-glow-white 2s infinite alternate;
+}
+
+@keyframes pulse-glow-white {
+    from {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
+        transform: translate(-50%, -50%) scale(0.95);
+    }
+    to {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 40px rgba(255, 255, 255, 0.8), 0 0 60px rgba(255, 255, 255, 0.6);
+        transform: translate(-50%, -50%) scale(1.05);
+    }
+}
