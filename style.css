@@ -8,6 +8,16 @@ body {
     line-height: 1.6;
 }
 
+/* Link styling */
+a {
+    color: #ffb02e;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -25,6 +35,17 @@ header h1 {
     font-weight: 700;
     margin: 0 0 1rem 0;
     color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.logo-left,
+.logo-right {
+    height: 2rem;
+    width: auto;
+    opacity: 0.8;
 }
 
 header p {
@@ -66,6 +87,13 @@ header p {
     
     header h1 {
         font-size: 2rem;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .logo-left,
+    .logo-right {
+        height: 1.5rem;
     }
     
     header p {
