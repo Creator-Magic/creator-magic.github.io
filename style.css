@@ -214,13 +214,13 @@ header p {
     }
 }
 
-.vibe-mike-russell-2847 {
+.vibe-jason-mcguire-2847 {
     background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
     position: relative;
     overflow: hidden;
 }
 
-.vibe-mike-russell-2847::before {
+.vibe-jason-mcguire-2847::before {
     content: '';
     position: absolute;
     top: 50%;
@@ -233,7 +233,7 @@ header p {
     animation: squiggle-transform 8s infinite;
 }
 
-.vibe-mike-russell-2847::after {
+.vibe-jason-mcguire-2847::after {
     content: '';
     position: absolute;
     top: 20%;
