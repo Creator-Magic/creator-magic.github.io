@@ -153,3 +153,35 @@ header p {
         background-position: 0% 50%;
     }
 }
+
+.vibe-mike-russell-4721 {
+    background: linear-gradient(135deg, #2a2a2a, #404040);
+    position: relative;
+    overflow: hidden;
+}
+
+.vibe-mike-russell-4721::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 50px solid #00ff88;
+    transform: translate(-50%, -50%);
+    animation: gentle-bounce 2s ease-in-out infinite;
+}
+
+@keyframes gentle-bounce {
+    0% {
+        transform: translate(-50%, -50%) translateY(0px);
+    }
+    50% {
+        transform: translate(-50%, -50%) translateY(-8px);
+    }
+    100% {
+        transform: translate(-50%, -50%) translateY(0px);
+    }
+}
