@@ -651,6 +651,8 @@ header p {
     100% {
         transform: translate(-50%, -50%) rotateX(60deg) rotateZ(360deg);
         border-color: rgba(255, 235, 59, 0.3);
+    }
+}
 
 .vibe-mike-russell-5382 {
     background: linear-gradient(135deg, #2E8B57 0%, #32CD32 25%, #00FF7F 50%, #98FB98 75%, #F0FFF0 100%);
