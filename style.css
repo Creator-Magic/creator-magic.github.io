@@ -107,3 +107,31 @@ header p {
         transform: translate(-50%, -50%) scale(1.05);
     }
 }
+
+.vibe-mike-russell-7294 {
+    background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
+    border: 4px solid;
+    border-image: linear-gradient(45deg, #ff0000, #ff8000, #ffff00, #80ff00, #00ff00, #00ff80, #00ffff, #0080ff, #0000ff, #8000ff, #ff00ff, #ff0080) 1;
+    animation: rainbow-spin 3s linear infinite;
+    position: relative;
+}
+
+@keyframes rainbow-spin {
+    0% {
+        transform: rotate(0deg);
+        border-image: linear-gradient(0deg, #ff0000, #ff8000, #ffff00, #80ff00, #00ff00, #00ff80, #00ffff, #0080ff, #0000ff, #8000ff, #ff00ff, #ff0080) 1;
+    }
+    25% {
+        border-image: linear-gradient(90deg, #ff0000, #ff8000, #ffff00, #80ff00, #00ff00, #00ff80, #00ffff, #0080ff, #0000ff, #8000ff, #ff00ff, #ff0080) 1;
+    }
+    50% {
+        border-image: linear-gradient(180deg, #ff0000, #ff8000, #ffff00, #80ff00, #00ff00, #00ff80, #00ffff, #0080ff, #0000ff, #8000ff, #ff00ff, #ff0080) 1;
+    }
+    75% {
+        border-image: linear-gradient(270deg, #ff0000, #ff8000, #ffff00, #80ff00, #00ff00, #00ff80, #00ffff, #0080ff, #0000ff, #8000ff, #ff00ff, #ff0080) 1;
+    }
+    100% {
+        transform: rotate(360deg);
+        border-image: linear-gradient(360deg, #ff0000, #ff8000, #ffff00, #80ff00, #00ff00, #00ff80, #00ffff, #0080ff, #0000ff, #8000ff, #ff00ff, #ff0080) 1;
+    }
+}
