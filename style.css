@@ -475,3 +475,88 @@ header p {
         transform: scale(0.8);
     }
 }
+
+.vibe-mike-russell-5382 {
+    background: linear-gradient(135deg, #2E8B57 0%, #32CD32 25%, #00FF7F 50%, #98FB98 75%, #F0FFF0 100%);
+    position: relative;
+    overflow: hidden;
+    animation: encouraging-glow 3s ease-in-out infinite alternate;
+}
+
+.vibe-mike-russell-5382::before {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 48px;
+    color: #FFFFFF;
+    font-weight: bold;
+    transform: translate(-50%, -50%);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(0, 255, 127, 0.6);
+    animation: checkmark-pulse 2s ease-in-out infinite;
+}
+
+.vibe-mike-russell-5382::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    right: 10%;
+    bottom: 10%;
+    border: 3px solid #FFD700;
+    border-radius: 6px;
+    opacity: 0;
+    animation: approval-flash 4s infinite;
+}
+
+@keyframes encouraging-glow {
+    from {
+        box-shadow: 0 0 15px rgba(50, 205, 50, 0.5), 0 0 30px rgba(0, 255, 127, 0.3);
+    }
+    to {
+        box-shadow: 0 0 30px rgba(50, 205, 50, 0.8), 0 0 60px rgba(0, 255, 127, 0.6), 0 0 90px rgba(152, 251, 152, 0.4);
+    }
+}
+
+@keyframes checkmark-pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(0, 255, 127, 0.6);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+        text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 40px rgba(0, 255, 127, 0.8), 0 0 60px rgba(50, 205, 50, 0.6);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(0, 255, 127, 0.6);
+    }
+}
+
+@keyframes approval-flash {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+        border-color: #FFD700;
+    }
+    20% {
+        opacity: 1;
+        transform: scale(1.05);
+        border-color: #FFA500;
+    }
+    40% {
+        opacity: 0.7;
+        transform: scale(1);
+        border-color: #32CD32;
+    }
+    60% {
+        opacity: 0.3;
+        transform: scale(0.95);
+        border-color: #00FF7F;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.9);
+        border-color: #FFD700;
+    }
+}
