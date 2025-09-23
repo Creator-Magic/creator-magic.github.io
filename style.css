@@ -812,3 +812,49 @@ header p {
         opacity: 0;
     }
 }
+
+.vibe-acemods-2749 {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+    animation: warm-red-glow 2.5s ease-in-out infinite alternate;
+}
+
+.vibe-acemods-2749::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle, rgba(220, 20, 60, 0.3) 0%, rgba(255, 69, 0, 0.2) 50%, transparent 70%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: red-pulse-inner 2s ease-in-out infinite;
+}
+
+@keyframes warm-red-glow {
+    from {
+        box-shadow: 0 0 20px rgba(220, 20, 60, 0.6), 0 0 40px rgba(255, 69, 0, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.1);
+    }
+    to {
+        box-shadow: 0 0 35px rgba(220, 20, 60, 0.9), 0 0 70px rgba(255, 69, 0, 0.7), 0 0 105px rgba(255, 99, 71, 0.5), inset 0 0 30px rgba(255, 255, 255, 0.2);
+    }
+}
+
+@keyframes red-pulse-inner {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.8;
+    }
+}
