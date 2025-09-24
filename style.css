@@ -1181,3 +1181,52 @@ header p {
         opacity: 0.9;
     }
 }
+
+.vibe-hardi-joshi-5284 {
+    background: #2a2a2a;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vibe-hardi-joshi-5284::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 70px solid #00ff00;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.vibe-hardi-joshi-5284::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #ff0000;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: ball-bounce-5284 1.5s ease-in-out infinite;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+}
+
+@keyframes ball-bounce-5284 {
+    0% {
+        bottom: 60px;
+        animation-timing-function: cubic-bezier(0.6, 0, 0.4, 1);
+    }
+    50% {
+        bottom: 20px;
+        animation-timing-function: cubic-bezier(0.6, 0, 0.4, 1);
+    }
+    100% {
+        bottom: 60px;
+    }
+}
