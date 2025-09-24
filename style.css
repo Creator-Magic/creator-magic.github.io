@@ -923,3 +923,45 @@ header p {
         opacity: 1;
     }
 }
+
+.vibe-iain-munro-3847 {
+    background: linear-gradient(135deg, #FF0000 0%, #FF4500 25%, #FF8C00 50%, #FFD700 75%, #FFFF00 100%);
+    position: relative;
+    overflow: hidden;
+    animation: apple-glow 2s ease-in-out infinite alternate;
+}
+
+.vibe-iain-munro-3847::before {
+    content: '🍎';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 48px;
+    transform: translate(-50%, -50%);
+    animation: apple-pulse 2.5s ease-in-out infinite;
+    filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.8));
+}
+
+@keyframes apple-glow {
+    from {
+        box-shadow: 0 0 15px rgba(255, 69, 0, 0.6), 0 0 30px rgba(255, 215, 0, 0.4);
+    }
+    to {
+        box-shadow: 0 0 25px rgba(255, 69, 0, 0.9), 0 0 50px rgba(255, 215, 0, 0.7), 0 0 75px rgba(255, 255, 0, 0.5);
+    }
+}
+
+@keyframes apple-pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.8));
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+        filter: drop-shadow(0 0 15px rgba(255, 215, 0, 1)) drop-shadow(0 0 25px rgba(255, 69, 0, 0.8));
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.8));
+    }
+}
