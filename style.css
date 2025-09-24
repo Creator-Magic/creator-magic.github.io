@@ -1230,3 +1230,38 @@ header p {
         bottom: 60px;
     }
 }
+
+.vibe-radio-brat-7429 {
+    background: #1276BC;
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vibe-radio-brat-7429::before {
+    content: '';
+    position: absolute;
+    width: calc(100% - 30px);
+    height: calc(100% - 30px);
+    background: transparent;
+    border: none;
+}
+
+.vibe-radio-brat-7429::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: transparent;
+    stroke: #8EC642;
+    stroke-width: 4px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3 1 L8 14 L13 1' stroke='%238EC642' stroke-width='0.8' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
