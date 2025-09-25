@@ -1590,3 +1590,59 @@ header p {
         transform: perspective(100px) rotateX(60deg) translateY(8px);
     }
 }
+
+.vibe-muhammad-subhan-imran-8473 {
+    background: #1a1a1a;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vibe-muhammad-subhan-imran-8473::before {
+    content: '';
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #107C10 0%, #0e5a0e 100%);
+    opacity: 0.7;
+    border-radius: 50%;
+    clip-path: polygon(
+        15% 30%, 35% 50%, 15% 70%, 25% 70%, 40% 55%, 40% 45%, 25% 30%,
+        85% 30%, 75% 30%, 60% 45%, 60% 55%, 75% 70%, 85% 70%, 65% 50%
+    );
+    transition: all 0.3s ease;
+}
+
+.vibe-muhammad-subhan-imran-8473::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, transparent 30%, #107C10 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.vibe-muhammad-subhan-imran-8473:hover::before {
+    opacity: 0.9;
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 15px #107C10) drop-shadow(0 0 25px #107C10);
+}
+
+.vibe-muhammad-subhan-imran-8473:hover::after {
+    opacity: 0.3;
+    animation: xbox-pulse-8473 1.5s ease-in-out infinite;
+}
+
+@keyframes xbox-pulse-8473 {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.5;
+    }
+}
