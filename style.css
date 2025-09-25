@@ -1507,3 +1507,86 @@ header p {
         filter: blur(0px);
     }
 }
+
+.vibe-jxo-4927 {
+    background:
+        linear-gradient(180deg, #0a0a1a 0%, #1a1a3a 30%, #2a2a4a 50%, #ff00ff 70%, #00ffff 85%, #ff00ff 100%),
+        linear-gradient(90deg, #ff00ff 0%, #00ffff 25%, #ff00ff 50%, #00ffff 75%, #ff00ff 100%);
+    background-size: 100% 100%, 200% 100%;
+    position: relative;
+    overflow: hidden;
+    animation: retro-landscape-4927 8s linear infinite;
+}
+
+.vibe-jxo-4927::before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background:
+        conic-gradient(from 0deg at 50% 50%,
+            #4d79ff 0deg, #c0c0c0 30deg, #4d79ff 60deg, #c0c0c0 90deg,
+            #4d79ff 120deg, #c0c0c0 150deg, #4d79ff 180deg, #c0c0c0 210deg,
+            #4d79ff 240deg, #c0c0c0 270deg, #4d79ff 300deg, #c0c0c0 330deg, #4d79ff 360deg);
+    clip-path: polygon(
+        50% 0%, 60% 20%, 80% 20%, 65% 35%, 80% 50%, 60% 40%, 50% 60%,
+        40% 40%, 20% 50%, 35% 35%, 20% 20%, 40% 20%, 50% 0%,
+        50% 15%, 55% 25%, 65% 25%, 57% 32%, 65% 40%, 55% 35%, 50% 45%,
+        45% 35%, 35% 40%, 42% 32%, 35% 25%, 45% 25%, 50% 15%
+    );
+    animation: snowflake-spin-4927 6s linear infinite;
+    filter: drop-shadow(0 0 10px rgba(77, 121, 255, 0.8)) drop-shadow(0 0 20px rgba(192, 192, 192, 0.6));
+}
+
+.vibe-jxo-4927::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 40%;
+    bottom: 0;
+    left: 0;
+    background:
+        repeating-linear-gradient(90deg, #ff00ff 0px, #ff00ff 2px, transparent 2px, transparent 10px),
+        repeating-linear-gradient(0deg, #00ffff 0px, #00ffff 1px, transparent 1px, transparent 8px);
+    opacity: 0.3;
+    animation: grid-move-4927 4s linear infinite;
+}
+
+@keyframes snowflake-spin-4927 {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg) scale(1);
+    }
+    25% {
+        transform: translate(-50%, -50%) rotate(90deg) scale(1.05);
+    }
+    50% {
+        transform: translate(-50%, -50%) rotate(180deg) scale(1);
+    }
+    75% {
+        transform: translate(-50%, -50%) rotate(270deg) scale(0.95);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg) scale(1);
+    }
+}
+
+@keyframes retro-landscape-4927 {
+    0% {
+        background-position: 0% 0%, 0% 0%;
+    }
+    100% {
+        background-position: 0% 0%, 200% 0%;
+    }
+}
+
+@keyframes grid-move-4927 {
+    0% {
+        transform: perspective(100px) rotateX(60deg) translateY(0);
+    }
+    100% {
+        transform: perspective(100px) rotateX(60deg) translateY(8px);
+    }
+}
