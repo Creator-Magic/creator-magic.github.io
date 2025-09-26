@@ -1792,3 +1792,51 @@ header p {
         filter: blur(0.5px) brightness(1.2);
     }
 }
+
+.vibe-zac-zimmerman-8429 {
+    background: #000000;
+    position: relative;
+    overflow: hidden;
+}
+
+.vibe-zac-zimmerman-8429::before,
+.vibe-zac-zimmerman-8429::after {
+    content: '10101110101';
+    position: absolute;
+    width: 100%;
+    color: #00ff00;
+    font-family: 'Courier New', monospace;
+    font-size: 10px;
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
+    animation: matrix-rain-8429 4s linear infinite;
+    opacity: 0;
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+.vibe-zac-zimmerman-8429::before {
+    left: 20%;
+    animation-delay: 0s;
+}
+
+.vibe-zac-zimmerman-8429::after {
+    left: 60%;
+    animation-delay: 2s;
+}
+
+@keyframes matrix-rain-8429 {
+    0% {
+        top: -20px;
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        top: 120px;
+        opacity: 0;
+    }
+}
