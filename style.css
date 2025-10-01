@@ -2210,3 +2210,70 @@ header p {
                     0 0 0 60px rgba(0, 255, 255, 0);
     }
 }
+
+.vibe-perseu-augusto-ramos-4821 {
+    background: linear-gradient(180deg, #1a1a1a 0%, #2a2a2a 50%, #1a1a1a 100%);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vibe-perseu-augusto-ramos-4821::before {
+    content: '';
+    position: absolute;
+    width: 70px;
+    height: 35px;
+    background: linear-gradient(135deg, #ff4444 0%, #cc0000 50%, #990000 100%);
+    border-radius: 15px 15px 8px 8px;
+    box-shadow:
+        0 2px 0 0 #333,
+        inset 0 -3px 5px rgba(0, 0, 0, 0.4),
+        inset 0 2px 3px rgba(255, 255, 255, 0.2);
+    animation: car-spin-4821 3s linear infinite;
+    transform-origin: center center;
+}
+
+.vibe-perseu-augusto-ramos-4821::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: radial-gradient(circle, #444 30%, #222 70%);
+    border-radius: 50%;
+    box-shadow:
+        46px 0 0 0 #444,
+        0 0 0 2px #666,
+        46px 0 0 2px #666;
+    bottom: 38px;
+    left: 23px;
+    animation: wheel-spin-4821 0.6s linear infinite;
+}
+
+@keyframes car-spin-4821 {
+    0% {
+        transform: perspective(200px) rotateY(0deg) rotateX(0deg);
+    }
+    25% {
+        transform: perspective(200px) rotateY(90deg) rotateX(5deg);
+    }
+    50% {
+        transform: perspective(200px) rotateY(180deg) rotateX(0deg);
+    }
+    75% {
+        transform: perspective(200px) rotateY(270deg) rotateX(-5deg);
+    }
+    100% {
+        transform: perspective(200px) rotateY(360deg) rotateX(0deg);
+    }
+}
+
+@keyframes wheel-spin-4821 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
