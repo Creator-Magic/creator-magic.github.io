@@ -79,30 +79,71 @@ header p {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
+/* Footer styling */
+footer {
+    text-align: center;
+    margin-top: 1rem;
+    padding-top: 2rem;
+}
+
+.thank-you {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin-bottom: 1rem;
+}
+
+.video-link {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.video-link a {
+    color: #ffb02e;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.video-link a:hover {
+    text-decoration: underline;
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
     .container {
         padding: 1rem;
     }
-    
+
     header h1 {
         font-size: 2rem;
         flex-direction: column;
         gap: 0.5rem;
     }
-    
+
     .logo-left,
     .logo-right {
         height: 1.5rem;
     }
-    
+
     header p {
         font-size: 1rem;
     }
-    
+
     .vibe-square {
         width: 100px;
         height: 100px;
+    }
+
+    footer {
+        margin-top: 3rem;
+    }
+
+    .thank-you {
+        font-size: 1.1rem;
+    }
+
+    .video-link {
+        font-size: 0.95rem;
     }
 }
 
